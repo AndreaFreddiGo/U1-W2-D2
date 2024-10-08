@@ -2,25 +2,76 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let n1 = 47
+let n2 = 13
+let biggest
+
+if (n1 > n2) {
+  biggest = n1
+  console.log('Il numero più grande è n1, pari a', biggest)
+} else if (n2 > n1) {
+  biggest = n2
+  console.log('Il numero più grande è n2, pari a', biggest)
+} else {
+  console.log('n1 e n2 sono uguali')
+}
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let n3 = 5 // applicando valore 5 alla variabile "n3" l'algoritmo ritorna in console la scritta EQUAL
+
+if (n3 === 5) {
+  console.log('EQUAL')
+} else {
+  console.log('NOT EQUAL')
+}
+
+n3 = 8 // assegnando nuovo valore diverso da 5 alla variabile "n3" l'algoritmo ritorna in console la scritta NOT EQUAL
+
+if (n3 === 5) {
+  console.log('EQUAL')
+} else {
+  console.log('NOT EQUAL')
+}
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let n4 = 45 // applicando valore divisibile per 5 alla variabile "n4" l'algoritmo ritorna in console la scritta "divisibile per 5"
+
+if (n4 % 5 === 0) {
+  console.log('n4 è divisibile per 5')
+} else {
+  console.log('n4 non è divisibile per 5')
+}
+
+n4 = 33 // assegnando nuovo valore non divisibile per 5 alla variabile "n4" l'algoritmo ritorna in console la scritta "non divisibile per 5"
+
+if (n4 % 5 === 0) {
+  console.log('n4 è divisibile per 5')
+} else {
+  console.log('n4 non è divisibile per 5')
+}
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let n5 = 23
+let n6 = 15
+
+if (n5 === 8 || n6 === 8 || n5 - n6 === 8 || n6 - n5 === 8) {
+  console.log(
+    'Uno dei numeri ha valore pari a 8 o la loro sottrazione da valore pari a 8'
+  )
+} else {
+  console.log(
+    'Nessuno dei numeri ha valore pari a 8 o la loro sottrazione da valore diverso da 8'
+  )
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -28,14 +79,48 @@
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let product1 = 25
+let product2 = 13
+let product3 = 15
+
+let totalShoppingCart = product1 + product2 + product3
+
+if (totalShoppingCart <= 50) {
+  totalShoppingCart = totalShoppingCart + 10
+  console.log(
+    'Totale checkout:',
+    totalShoppingCart,
+    '(costo di spedizione pari a 10)'
+  )
+} else {
+  console.log(
+    'Totale checkout:',
+    totalShoppingCart,
+    '(costo di spedizione gratuito per ordine superiore a 50)'
+  )
+}
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+totalShoppingCart = (product1 + product2 + product3) * 0.8 // applico un fattore correttivo che, per il Black Friday considera solo l'80% del totale (100% - 20%)
+
+if (totalShoppingCart <= 50) {
+  totalShoppingCart = totalShoppingCart + 10
+  console.log(
+    'Totale checkout:',
+    totalShoppingCart,
+    '(costo di spedizione pari a 10)'
+  )
+} else {
+  console.log(
+    'Totale checkout:',
+    totalShoppingCart,
+    '(costo di spedizione gratuito per ordine superiore a 50)'
+  )
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -43,7 +128,23 @@
   Alla fine mostra il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let a = 55
+let b = 85
+let c = 13
+
+if (a < b && b < c) {
+  console.log(a, b, c)
+} else if (a < c && c < b) {
+  console.log(a, c, bb)
+} else if (b < a && a < c) {
+  console.log(b, a, c)
+} else if (b < c && c < a) {
+  console.log(b, c, a)
+} else if (c < a && a < b) {
+  console.log(c, a, b)
+} else if (c < b && b < a) {
+  console.log(c, b, a)
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -81,7 +182,8 @@ const me = {
   skills: ['javascript', 'html', 'css'],
 }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.city = 'Toronto'
+console.log(me)
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
